@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" style="-fx-background-color: #f3f9ff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <AnchorPane prefHeight="115.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="435.0">
+         <children>
+            <JFXButton prefHeight="45.0" prefWidth="140.0" style="-fx-background-color: #313E50;" text="Create Group" textFill="WHITE" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="225.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton prefHeight="45.0" prefWidth="174.0" style="-fx-background-color: #313E50;" text="Generate Partner" textFill="WHITE" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="400.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="400.0" prefWidth="142.0" style="-fx-background-color: #DBEAFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="400.0" prefWidth="48.0" style="-fx-background-color: #313E50;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXButton ellipsisString="" graphicTextGap="0.0" layoutY="5.0" pickOnBounds="false" prefHeight="0.0" prefWidth="0.0">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="HOME" size="50.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton ellipsisString="" graphicTextGap="0.0" layoutY="70.0" pickOnBounds="false" prefHeight="0.0" prefWidth="0.0">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT" size="50" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <JFXButton graphicTextGap="0.0" layoutX="68.0" layoutY="15.0" prefHeight="44.0" prefWidth="117.0" ripplerFill="BLACK" text="   Group" textFill="#313e50">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <FontAwesomeIconView fill="#313e50" glyphName="PLUS_CIRCLE" layoutX="80.0" layoutY="45.0" size="20" wrappingWidth="12.0" />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="addButton" layoutX="611.0" layoutY="60.0" onMouseClicked="#addButtonClicked" prefHeight="45.0" prefWidth="75.0" style="-fx-background-color: #fff;" text="Add" AnchorPane.rightAnchor="114.0" AnchorPane.topAnchor="60.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tableView" layoutX="224.0" layoutY="105.0" prefHeight="316.0" prefWidth="537.0" AnchorPane.bottomAnchor="129.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="39.0" AnchorPane.topAnchor="105.0">
+        <columns>
+          <TableColumn fx:id="name" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="age" prefWidth="75.0" text="Age" />
+            <TableColumn fx:id="email" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="gender" prefWidth="75.0" text="Gender" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="deleteButton" layoutX="686.0" layoutY="60.0" onMouseClicked="#deleteButtonClicked" prefHeight="45.0" prefWidth="75.0" style="-fx-background-color: #fff;" text="Delete" AnchorPane.rightAnchor="39.0" AnchorPane.topAnchor="60.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="227.0" layoutY="57.0" text="Group Name">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
